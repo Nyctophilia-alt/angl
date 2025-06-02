@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Language Tests</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>English Language Tests</h1>
+            <p class="subtitle">Choose a test to check your English skills</p>
+        </header>
+        
+        <div class="test-selector">
+            <button class="tab-btn active" data-test="grammar">Grammar Test</button>
+            <button class="tab-btn" data-test="vocabulary">Vocabulary Test</button>
+            <button class="tab-btn" data-test="listening">Listening Test</button>
+            <button class="tab-btn" data-test="mixed">Mixed Test</button>
+        </div>
+
+        <div class="quiz-container" id="quiz">
+            <div id="welcome-screen" class="active">
+                <h2>Welcome to English Tests!</h2>
+                <p class="test-description" id="test-description">Select a test type above and click Start to begin.</p>
+                <div class="test-info">
+                    <div class="info-item">
+                        <span class="info-label">Questions:</span>
+                        <span class="info-value" id="question-count">15</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Estimated time:</span>
+                        <span class="info-value" id="estimated-time">15 min</span>
+                    </div>
+                </div>
+                <button id="start-btn" class="btn">Start Test</button>
+            </div>
+
+            <div id="question-screen" class="hidden">
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <h2 id="question"></h2>
+                <div class="options" id="options"></div>
+                <button id="next-btn" class="btn">Next Question</button>
+            </div>
+
+            <div id="results-screen" class="hidden">
+                <h2>Test Complete!</h2>
+                <div class="score-container">
+                    <div class="score-circle">
+                        <span id="score">0</span>
+                        <span class="score-label">Score</span>
+                    </div>
+                </div>
+                <div id="feedback"></div>
+                <div class="result-buttons">
+                    <button id="restart-btn" class="btn">Try Again</button>
+                    <button id="choose-test-btn" class="btn btn-secondary">Choose Another Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
