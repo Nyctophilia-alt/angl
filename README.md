@@ -35,4 +35,4 @@ An interactive web application for testing English language skills with multiple
 ├── styles.css         # Styles and layout
 ├── script.js         # Test logic and functionality
 └── README.md        # Project documentation
-``` 
+```
